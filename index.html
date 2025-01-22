@@ -8,7 +8,17 @@
     
 </head>
 <body>
+    <h2> Javascript error handling</h2>
+    <p id="demo"></p>
 
+    <script>
+        try{
+            addler("welcome guest");
+        }
+        catch(err){
+            document.getElementById("demo").innerHTML = err.message;
+        }
+    </script>
 </body>
 <script src="script.js"></script>
 </html>
