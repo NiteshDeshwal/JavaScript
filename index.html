@@ -8,6 +8,52 @@
     
 </head>
 <body>
+  <h2>callback and asynchronous function</h2>
+
+  <p id="demo"></p>
+
+  <script>
+    function myDisplayer(something){
+      document.getElementById("demo").innerHTML = something;
+    }
+
+    function myCalculator(num1, num2, myCallBack){
+      let sum = num1 + num2;
+      myCallBack(sum);
+    }
+    myCalculator(5,8,myDisplayer);
+  </script> 
+
+
+  <!-- SET TIMEOUT -->
+<h2>set timeout</h2>
+<p id="demo"></p>
+<script>
+  // setTimeout(myFunction,3000);
+  // function myFunction(){
+  //   document.getElementById("demo").innerHTML = "I love you!!"
+  // }
+
+  setTimeout(function() {myFunction("ilove you");}, 3000);
+  
+  function myFunction(value){
+    document.getElementById("demo").innerHTML = value;
+  }
+
+</script>
+
+  <h2>SET INTERVALS</h2>
+  <p id="demo"></p>
+  <script>
+    setInterval(myFunction, 4000);
+    function myFunction(){
+      let d= new Date();
+      document.getElementById("demo").innerHTML=
+      d.getHours() + ":" +
+      d.getMinutes() + ":" +
+      d.getSeconds();
+    }
+  </script>
 
 </body>
 <script src="script.js"></script>
